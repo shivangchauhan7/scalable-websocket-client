@@ -1,0 +1,23 @@
+{
+  "name": "scalable-websocket-client",
+  "version": "1.0.0",
+  "description": "A web application for testing websocket connections.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivangchauhan7/scalable-websocket-client.git"
+  },
+  "keywords": [],
+  "author": "Shivang Chauhan <shivangchauhan7@gmail.com>",
+  "contributors": [
+    "Victor Basumatary <vlenceleuth@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivangchauhan7/scalable-websocket-client/issues"
+  },
+  "homepage": "https://github.com/shivangchauhan7/scalable-websocket-client#readme"
+}
