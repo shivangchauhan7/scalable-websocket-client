@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/shivangchauhan7/scalable-websocket-client/issues"
   },
-  "homepage": "https://github.com/shivangchauhan7/scalable-websocket-client#readme"
+  "homepage": "https://github.com/shivangchauhan7/scalable-websocket-client#readme",
+  "devDependencies": {
+    "lerna": "^5.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }
