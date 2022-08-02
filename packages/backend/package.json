@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "This is where all the magic happens.",
   "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "set ENV_PATH=../.env.development&&set LOG_LEVEL=debug&&nodemon src/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
