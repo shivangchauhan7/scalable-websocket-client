@@ -2,6 +2,7 @@
   "conventionalCommits.scopes": [
     "README",
     "backend",
-    "frontend-web"
+    "frontend-web",
+    ".gitignore"
   ]
 }
