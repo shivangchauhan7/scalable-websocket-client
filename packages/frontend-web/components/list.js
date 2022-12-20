@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import PropTypes from 'prop-types'
 
 /**
@@ -13,12 +14,31 @@ import PropTypes from 'prop-types'
  * `id` field to use as a key.
  */
 export default function List(props) {
-  const {Item, items = []} = props
+  const [selectedItem, setSelectedItem] = useState(null)
+  const {Item, items = [], onSelect = () => {}} = props
+
+  const _onSelect = (item) => {
+    if (!!selectedItem && item.id == selectedItem.id) {
+      // already selected. deselect it.
+      onSelect(null)
+      setSelectedItem(null)
+    }
+    else {
+      onSelect(item)
+      setSelectedItem(item)
+    }
+  }
 
   return (
     <div className="flex flex-col-reverse overflow-auto">
       {
-        items.map(item => <Item key={item.id} {...item} />)
+        items.map(item => (
+          <Item
+            key={item.id}
+            onSelect={_onSelect}
+            isSelected={!!selectedItem && selectedItem.id === item.id}
+            {...item} />
+        ))
       }
     </div>
   )
@@ -26,5 +46,6 @@ export default function List(props) {
 
 List.propTypes = {
   Item: PropTypes.elementType.isRequired,
-  items: PropTypes.array
+  items: PropTypes.array,
+  onSelect: PropTypes.func
 }
